@@ -24,14 +24,14 @@ def start_burp(dic_path,url):
     for passwd in line:
         response = requests.get(url+passwd)
         if '' in response.text:
-            print("该账号密码为:"+passwd)
+            print("该账号密码为: "+passwd)
             break
+        print("检测完毕")
 
 
 if __name__ == "__main__":
     url=''
     dictionary_path = 'D:/PythonProject/tests/testpswd.txt'
     line = read_txt_lines(dictionary_path)
-    for pswd in line:
-        print(pswd)
+
 
